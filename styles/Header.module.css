@@ -26,3 +26,16 @@
 .search__bar button {
   margin-left: 1rem;
 }
+
+.centered {
+  text-align: center;
+}
+
+
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
