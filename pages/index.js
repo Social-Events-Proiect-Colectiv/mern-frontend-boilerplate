@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import Header2 from '../components/organisms/Header2';
 import Audentification from '../components/organisms/Audentification';
+import HomePage from './AboutUsPage';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Header2 />
         <Audentification />
+        <HomePage />
       </main>
     </>
   );
