@@ -1,3 +1,5 @@
+// pages/index.js
+
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import Header2 from '../components/organisms/Header2';
