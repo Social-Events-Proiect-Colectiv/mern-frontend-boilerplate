@@ -2,12 +2,12 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ backgroundImage: 'linear-gradient(to right, #ffecd2, #fcb69f)' }}>
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
             <p className="text-center">
-              &copy; {new Date().getFullYear()} Company Name. All Rights Reserved.
+              &copy; {new Date().getFullYear()} Dan, Deea, Clau, Nadia. All Rights Reserved.
             </p>
             <ul className="list-inline text-center">
               <li className="list-inline-item">

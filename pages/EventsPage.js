@@ -33,16 +33,19 @@ const EventsPage = () => {
     
     <div>
 
-      <section className="events">
-        <div className="container">
-          <h2>Upcoming events</h2>
-          <div className="event-cards row justify-content-center">
-            {events.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
+<section className="events">
+  <div className="container">
+    <h2>Upcoming events</h2>
+    <div className="row justify-content-center">
+      {events.map((event) => (
+        <div className="col-12 col-md-6 col-lg-4 mb-4" key={event.id}>
+          <EventCard event={event} />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
     </div>
   );
