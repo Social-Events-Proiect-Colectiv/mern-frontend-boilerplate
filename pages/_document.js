@@ -1,4 +1,10 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import dynamic from "next/dynamic";
+
+const DynamicComponentWithNoSSR = dynamic(
+  () => import("mdb-react-ui-kit"),
+  { ssr: false }
+);
 
 export default function Document() {
   return (
