@@ -1,53 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/organisms/Header2';
 import Footer from '../components/organisms/Footer';
 import EventCard from '../components/organisms/EventCard';
+//nu umblati la ce ii in afara functiei return()
 
 
 const EventsPage = () => {
-  // Sample event data
-  const events = [
-    {
-      id: 1,
-      title: 'Event 1',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      date: '2023-06-01',
-      location: 'New York, NY',
-    },
-    {
-      id: 2,
-      title: 'Event 2',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      date: '2023-06-15',
-      location: 'San Francisco, CA',
-    },
-    {
-      id: 3,
-      title: 'Event 3',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      date: '2023-07-01',
-      location: 'Chicago, IL',
-    },
-  ];
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/events');
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
 
   return (
-    
     <div>
-
-<section className="events">
-  <div className="container">
-    <h2>Upcoming events</h2>
-    <div className="row justify-content-center">
-      {events.map((event) => (
-        <div className="col-12 col-md-6 col-lg-4 mb-4" key={event.id}>
-          <EventCard event={event} />
+      <section className="events">
+        <div className="container scroll">
+          <h2>Upcoming events</h2>
+          <div className="row justify-content-center">
+            {events.map((event) => (
+              <div className="col-12 col-md-6 col-lg-4 mb-4" key={event._id}>
+                <EventCard event={event} />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
+      </section>
     </div>
   );
 };

@@ -1,0 +1,29 @@
+Footer.module.css
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  padding: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline;
+  padding: 0 10px;
+}

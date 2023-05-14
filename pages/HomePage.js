@@ -4,6 +4,7 @@ import Footer from '../components/organisms/Footer';
 import EventCard from './/EventsPage';
 import EventsPage from './/EventsPage';
 import Sidebar from '@/components/organisms/sidebar';
+//nu umblati la ce ii in afara functiei return()
 
 const HomePage = () => {
   // Sample event data
@@ -41,27 +42,18 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="about">
-        <div className="container">
-          <h2>About Us</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget sodales urna, in vestibulum turpis. Aliquam aliquet diam ac neque consequat, nec consequat tellus lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam sem nisi, feugiat eu venenatis in, tincidunt id neque. Nullam ultricies euismod nisl vitae lacinia.</p>
+      <section className="events card">
+        <div className="container card">
+          <h2>Upcoming Events</h2>
+          <div className="row">
+            {events.map((event) => (
+              <div className="col-12 col-md-6 col-lg-4 mb-4" key={event.id}>
+                <EventCard event={event} />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-
-      <section className="features">
-        <div className="container">
-          <h2>Features</h2>
-          <ul>
-            <li>Discover a wide range of events</li>
-            <li>Join events and connect with like-minded people</li>
-            <li>Create and manage your own events</li>
-            <li>Get notifications about upcoming events</li>
-          </ul>
-        </div>
-      </section>
-
-      <EventsPage />
-      <Footer />
     </div>
   );
 }
