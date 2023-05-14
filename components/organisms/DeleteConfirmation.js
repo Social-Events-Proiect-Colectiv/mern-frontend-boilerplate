@@ -1,4 +1,5 @@
 import React from 'react';
+//nu umblati la ce ii in afara functiei return()
 
 const DeleteConfirmation = ({ event, onSubmit }) => {
   const handleDelete = () => {

@@ -4,6 +4,7 @@ import Footer from '../components/organisms/Footer';
 import EventCard from '../components/organisms/EventCard';
 import Modal from '../components/organisms/Modal';
 import EventForm from '../components/organisms/EventForm';
+//nu umblati la ce ii in afara functiei return()
 
 const HomePageadmin = () => {
   const [events, setEvents] = useState([]);
@@ -89,8 +90,8 @@ const HomePageadmin = () => {
               <div className="col-12 col-md-6 col-lg-4 mb-4" key={event._id}>
                 <EventCard event={event} />
                 <div>
-                  <button onClick={() => handleEditEvent(event._id)}>Edit</button>
-                  <button onClick={() => handleDeleteEvent(event._id)}>Delete</button>
+                  <button className="btn btn-info mr-2" onClick={() => handleEditEvent(event._id)}>Edit</button>
+                  <button className="btn btn-danger" onClick={() => handleDeleteEvent(event._id)}>Delete</button>
                 </div>
               </div>
             ))}

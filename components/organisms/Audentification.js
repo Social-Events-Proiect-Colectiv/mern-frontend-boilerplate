@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {MDBContainer, MDBCol, MDBRow, MDBBtn, MDBIcon, MDBInput, MDBCheckbox } from 'mdb-react-ui-kit';
+//nu umblati la ce ii in afara functiei return()
 
 function Authentication() {
 

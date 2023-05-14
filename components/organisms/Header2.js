@@ -8,7 +8,7 @@ const Header = () => {
       <Navbar bg="blue" expand="lg" style={{ backgroundImage: 'linear-gradient(to left, #c6ffdd, #fbd786, #f7797d)' }}>
         <div className="p-3">
           <NavDropdown title={<i className="fa fa-user fa-white"></i>} id="user-dropdown">
-            <NavDropdown.Item href="Login">Login</NavDropdown.Item>
+            <NavDropdown.Item href="login">Login</NavDropdown.Item>
             <NavDropdown.Item href="/register">Register</NavDropdown.Item>
           </NavDropdown>
         </div>
