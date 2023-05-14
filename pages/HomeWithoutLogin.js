@@ -1,39 +1,12 @@
 import React from 'react';
 import Header2 from '../components/organisms/Header2';
 import Footer from '../components/organisms/Footer';
-import EventCard from './/EventsPage';
-import EventsPage from './/EventsPage';
-import Sidebar from '@/components/organisms/sidebar';
+import EventsPage from './EventsPage';
+import dinnerImage from '../images/dinner.jpg';
 
-const HomePage = () => {
-  // Sample event data
-  const events = [
-    {
-      id: 1,
-      title: 'Event 1',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      date: '2023-06-01',
-      location: 'New York, NY',
-    },
-    {
-      id: 2,
-      title: 'Event 2',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      date: '2023-06-15',
-      location: 'San Francisco, CA',
-    },
-    {
-      id: 3,
-      title: 'Event 3',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      date: '2023-07-01',
-      location: 'Chicago, IL',
-    },
-  ];
-
+const HomeWithoutLogin = () => {
   return (
     <div>
-      <Header2 />
       <section style={{ backgroundImage: 'linear-gradient(to left, #c6ffdd, #fbd786, #f7797d)' }}>
         <div className="container">
           <h1>Welcome to our Events App!</h1>
@@ -61,9 +34,9 @@ const HomePage = () => {
       </section>
 
       <EventsPage />
-      <Footer />
+
     </div>
   );
 }
 
-export default HomePage;
+export default HomeWithoutLogin;

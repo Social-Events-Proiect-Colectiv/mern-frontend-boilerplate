@@ -6,6 +6,7 @@ import Header2 from '../components/organisms/Header2';
 import Audentification from '../components/organisms/Audentification';
 import HomePage from './HomePage';
 import Footer from '../components/organisms/Footer';
+import HomeWithoutLogin from './HomeWithoutLogin';
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
       </Head>
       <main>
         <Header2 />
-        <HomePage />
+        <HomeWithoutLogin />
         <Footer/>
       </main>
     </>
