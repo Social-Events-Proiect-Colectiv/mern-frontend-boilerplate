@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Link from 'next/link';
 import Footer from '@/components/organisms/Footer';
 import Header from '@/components/organisms/Header2';
+import nookies from 'nookies';
 
 export default class Register extends Component {
     constructor(props){
