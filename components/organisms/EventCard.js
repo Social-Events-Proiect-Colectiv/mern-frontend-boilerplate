@@ -4,8 +4,9 @@ const EventCard = ({ event }) => {
   const { title, description, date, location } = event;
 
   return (
-    <div className="card p-3 mb-3 w-50 bg-dark text-white">
-      <div className="card-header">
+    <div className="card p-3 mb-3 w-100 bg-dark text-white">
+      <i className="fa fa-utensils"></i>
+        <div className="card-header">
         <div className="card-title">
           <h3 className="event-title">{title}</h3>
           <p className="event-description">{description}</p>

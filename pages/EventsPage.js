@@ -3,6 +3,7 @@ import Header from '../components/organisms/Header2';
 import Footer from '../components/organisms/Footer';
 import EventCard from '../components/organisms/EventCard';
 
+
 const EventsPage = () => {
   // Sample event data
   const events = [
